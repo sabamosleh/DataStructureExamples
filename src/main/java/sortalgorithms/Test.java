@@ -13,6 +13,8 @@ public class Test {
         System.out.println(Arrays.toString(doSort.bubbleSort(inputs)));
         System.out.println(Arrays.toString(doSort.selectionSort(inputs)));
         System.out.println(Arrays.toString(doSort.mergeSort(inputs)));
+        System.out.println(Arrays.toString(doSort.insertionSort(inputs)));
+
 
 
 

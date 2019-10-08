@@ -13,8 +13,8 @@ public class Test {
         System.out.println(Arrays.toString(doSort.bubbleSort(inputs)));
 
 
-
-
+        inputs = new int[] {90,32,19,18,4,1};
+        System.out.println(Arrays.toString(Sort.selectionSort(inputs)));
 
     }
 

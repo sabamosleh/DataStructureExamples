@@ -79,12 +79,32 @@ public class Sort {
     }
 
 
+    
+    
+    // Main function that sorts inputArray[l..r] using
+    // merge()
+    public int[] mergeSort(int[] inputArray, int l, int r) {
+        if (l < r) {
+            // Find the middle point
+            int m = (l + r) / 2;
+
+            // Sort first and second halves
+            mergeSort(inputArray, l, m);
+            mergeSort(inputArray, m + 1, r);
+
+            // Merge the sorted halves
+            merge(inputArray, l, m, r);
+        }
+                return inputArray;
+    }
+    
+    
     /* Java program for Merge Sort */
     // Merges two subarrays of inputArray[];
     // First subarray is inputArray[l..m]
     // Second subarray is inputArray[m+1..r]
     
-    public int[] merge(int[] inputArray, int l, int m, int r) {
+    public void merge(int[] inputArray, int l, int m, int r) {
         // Find sizes of two subarrays to be merged
         int n1 = m - l + 1;
         int n2 = r - m;
@@ -131,26 +151,11 @@ public class Sort {
             j++;
             k++;
         }
-        return inputArray;
 
     }
 
 
-    // Main function that sorts inputArray[l..r] using
-    // merge()
-    void sort(int[] inputArray, int l, int r) {
-        if (l < r) {
-            // Find the middle point
-            int m = (l + r) / 2;
-
-            // Sort first and second halves
-            sort(inputArray, l, m);
-            sort(inputArray, m + 1, r);
-
-            // Merge the sorted halves
-            merge(inputArray, l, m, r);
-        }
-    }
+    
 
     public Sort(int[] inputArray) {
         this.inputArray = inputArray;

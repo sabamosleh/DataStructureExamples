@@ -12,6 +12,7 @@ public class Test {
         Sort doSort=new Sort(inputs);
         System.out.println(Arrays.toString(doSort.bubbleSort(inputs)));
         System.out.println(Arrays.toString(doSort.selectionSort(inputs)));
+        System.out.println(Arrays.toString(doSort.mergeSort(inputs)));
 
 
 

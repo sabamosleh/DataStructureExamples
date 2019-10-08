@@ -35,6 +35,22 @@ public class Sort {
 
     }
 
+    public static int[] insertionSort(int[] inputArray) {
+        for(int i = 1; i < inputArray.length; i++) {
+            int j = 0;
+            while(i > j && inputArray[i] >= inputArray[j]) {
+                j++;
+            }
+            int next = inputArray[i];
+            for(int k = i; k > j; k--) {
+                inputArray[k] = inputArray[k-1];
+            }
+            inputArray[j] = next;
+        }
+        return inputArray;
+    }
+
+
     public Sort(int[] inputArray) {
         this.inputArray = inputArray;
     }

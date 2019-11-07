@@ -35,6 +35,27 @@ public class Sort {
 
     }
 
+    public int[] selectionSort(int[] inputArray){
+
+        for(int j=0;j<inputArray.length;j++) {
+            int min=inputArray[0];
+            int index=0;
+            for (int i = j; i < inputArray.length - 1; i++) {
+
+                if (min > inputArray[i]) {
+                    min = inputArray[i];
+                    index=i;
+                }
+
+            }
+            inputArray[index]=inputArray[j];
+
+            inputArray[j] = min;
+        }
+        return inputArray;
+
+    }
+
     public Sort(int[] inputArray) {
         this.inputArray = inputArray;
     }

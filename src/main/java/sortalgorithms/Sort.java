@@ -113,4 +113,24 @@ public class Sort {
 
 
     }
+
+    public int[] insertionSort(int[] inputArray){
+
+        for (int j=1;j<inputArray.length;j++){
+
+            int current=inputArray[j-1];
+
+            while (current>inputArray[j] && j>0){
+
+                int temp=inputArray[j-1];
+                inputArray[j-1]=inputArray[j];
+                inputArray[j]=temp;
+                j--;
+
+            }
+
+        }
+        return inputArray;
+
+    }
 }
